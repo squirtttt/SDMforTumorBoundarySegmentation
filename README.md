@@ -1,4 +1,4 @@
-# Self-Training with Signed Distance Maps for Enhanced Tumor Boundary Segmentation in Histopathology
+# Self-Training for Boundary-Aware Tumor Segmentation via Signed Distance Map
 
 ## Description
 <img src="./imgs/overall_pipeline.jpg" alt="Overall pipeline"></img><br/>
@@ -13,6 +13,9 @@ Examples are shown below. The proposed method accurately captures complex bounda
 
 
 ## Data setup
-This paper conducts experiments on customized breast cancer dataset.
+The BCSS dataset used in this paper is from [Kaggle-Breast Cancer Semantic Segmentation (BCSS)](https://www.kaggle.com/datasets/whats2000/breast-cancer-semantic-segmentation-bcss?resource=download-directory&select=gtruth_codes_512.tsv).
+The patch image size of 256*256 is cropped from BCSS_512, and we selectively used a subset of annotation labels(tumor, stroma, dcis). The remaining labels were treated as background.
+Preprocessing code is available in BCSS_preprocess.ipynb.
+
 ## Usage
 Follow the semi_sdm_unet.py
